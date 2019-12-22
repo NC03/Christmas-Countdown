@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "Cutive Mono";
+	src: url("CutiveMono-Regular.ttf") format("truetype");
+}
+body,
+html {
+	font-family: "Cutive Mono", monospace;
+	font-weight: bold;
+	background-color: rgb(250, 237, 190);
+	text-align: center;
+}
+p {
+	font-size: 300%;
+}
+p:nth-child(2n + 1) {
+	color: rgb(237, 64, 64);
+}
+p:nth-child(2n) {
+	color: rgb(9, 125, 7);
+}
+h1 {
+    font-size: 300%;
+    color: white;
+    -webkit-text-stroke:1px black;
+}
