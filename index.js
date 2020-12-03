@@ -76,9 +76,8 @@ function updateDisplay() {
 			{ value: timeDelta.day % 7, text: "Days", digits: 1, hideZero: true },
 			{ value: timeDelta.hr, text: "Hours", digits: 1, hideZero: false },
 			{ value: timeDelta.min, text: "Minutes", digits: 2, hideZero: false },
-            { value: timeDelta.s, text: "Seconds", digits: 2, hideZero: false }
-            // ,
-			// { value: timeDelta.ms, text: "Milliseconds", digits: 3, hideZero: false },
+			{ value: timeDelta.s, text: "Seconds", digits: 2, hideZero: false },
+			// ,{ value: timeDelta.ms, text: "Milliseconds", digits: 3, hideZero: false }
 		];
 		for (index in keys) {
 			var key = keys[index];
@@ -86,7 +85,7 @@ function updateDisplay() {
 			if (key.value == 1) {
 				text += " " + key.text.substring(0, key.text.length - 1);
 			} else if (key.value == 0 && key.hideZero) {
-                text = "";
+				text = "";
 			} else {
 				text += " " + key.text;
 			}
@@ -102,9 +101,7 @@ function updateDisplay() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	setInterval(() => {
-		updateDisplay();
-	}, 100);
+	setInterval(updateDisplay, 100);
 });
 
 /**
