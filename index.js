@@ -89,9 +89,11 @@ function updateDisplay() {
 			} else {
 				text += " " + key.text;
 			}
-			var p = document.createElement("P");
-			p.innerHTML = text;
-			cont.appendChild(p);
+			if(text != ""){
+				var p = document.createElement("P");
+				p.innerHTML = text;
+				cont.appendChild(p);
+			}
 		}
 	} else {
 		var p = document.createElement("P");
